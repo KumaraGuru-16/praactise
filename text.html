@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h2>Job Application Form</h2>
+
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+        
+        <!-- Full Name -->
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        <small>Enter 10 digit number</small><br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        <!-- Skills -->
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skills[]" value="HTML"> HTML
+        <input type="checkbox" name="skills[]" value="CSS"> CSS
+        <input type="checkbox" name="skills[]" value="JavaScript"> JavaScript
+        <input type="checkbox" name="skills[]" value="PHP"> PHP
+        <br><br>
+
+        <!-- Position -->
+        <label for="position">Position Applied For:</label><br>
+        <select name="position" id="position">
+            <option value="">--Select Position--</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Full Stack Developer">Full Stack Developer</option>
+        </select>
+        <br><br>
+
+        <!-- Resume Upload -->
+        <label for="resume">Upload Resume:</label><br>
+        <input type="file" id="resume" name="resume" required>
+        <br><br>
+
+        <!-- Message -->
+        <label for="message">Cover Letter:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40"></textarea>
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+
+    </form>
+
+</body>
+</html>
